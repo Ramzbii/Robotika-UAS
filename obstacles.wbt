@@ -3,15 +3,15 @@
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackground.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/factory/containers/protos/WoodenBox.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
 
 WorldInfo {
   basicTimeStep 16
 }
 Viewpoint {
-  orientation -0.10126669006213149 -0.9008325411025147 0.4221916512374997 5.762759868026926
-  position -1.2920085479469343 0.42793490039182386 0.9093051983947046
+  orientation -0.11828630605544573 -0.9804422974889995 0.15729351892004084 4.974610084438286
+  position -1.0461033976274623 -0.07088775494275718 3.3246812288405994
 }
 TexturedBackground {
 }
@@ -20,47 +20,147 @@ TexturedBackgroundLight {
 Floor {
   size 1 1
 }
-Solid {
-  translation 0.2 0 0.2
+DEF BALL Solid {
+  translation 0.20099 0.0116498 0.2
+  rotation 0 1 0 0
+  scale 1.1201 1.1201 1.1201
   children [
     Shape {
       appearance PBRAppearance {
         roughness 1
         metalness 0
       }
-      geometry Sphere {
-        radius 0.1
+      geometry DEF BALL_GEOMETRY Sphere {
+        radius 0.05
+        subdivision 2
       }
     }
   ]
-  boundingObject Sphere {
-    radius 0.1
+  boundingObject USE BALL_GEOMETRY
+}
+DEF WALL_1 Solid {
+  translation -0.5986361283088444 0.005943679488524683 0.16703196647871418
+  rotation -1.9046140189352934e-08 -3.0017260224898838e-06 0.9999999999954946 0.008745332626538888
+  scale 0.6 0.6 0.6
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 1 0
+        roughness 1
+        metalness 0
+      }
+      geometry DEF WALL Box {
+        size 0.3 1.7 0.6
+      }
+    }
+  ]
+  name "solid(1)"
+  boundingObject USE WALL
+  physics Physics {
   }
+  linearVelocity -2.526445367784724e-10 -1.1687092689537963e-11 -1.1269696074284954e-10
+  angularVelocity 4.6974873263623685e-11 1.5918072266333784e-09 -9.096954618632935e-11
+}
+DEF WALL_2 Solid {
+  translation 0.6016441712552987 -0.0034023332421297273 0.1670319665546584
+  rotation -4.251144893667426e-08 3.1241314696947093e-06 0.9999999999951189 0.008795081245699332
+  scale 0.6 0.6 0.6
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 1 0
+        roughness 1
+        metalness 0
+      }
+      geometry DEF WALL Box {
+        size 0.3 1.7 0.6
+      }
+    }
+  ]
+  name "solid(2)"
+  boundingObject USE WALL
+  physics Physics {
+  }
+  linearVelocity 2.581154799045236e-10 -1.9811458204928713e-11 -9.323124605141406e-11
+  angularVelocity 9.401086394215092e-11 -1.5616953472627157e-09 8.394494644540288e-11
+}
+DEF WALL_3 Solid {
+  translation 0.005796860349938021 -0.5694187312670108 0.16703196288063174
+  rotation -1.7801247358751032e-08 1.8092223951735265e-08 0.9999999999999997 1.5704387468559209
+  scale 0.6 0.6 0.6
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 1 0
+        roughness 1
+        metalness 0
+      }
+      geometry DEF WALL Box {
+        size 0.3 1.7 0.6
+      }
+    }
+  ]
+  name "solid(3)"
+  boundingObject USE WALL
+  physics Physics {
+  }
+  linearVelocity -1.2420730291303218e-11 -6.82922412209268e-11 1.1918762801580171e-10
+  angularVelocity 4.157410881572895e-10 1.4884734103054407e-11 4.104720117193748e-11
+}
+DEF WALL_4 Solid {
+  translation -0.0028484927929846803 0.5765130365035778 0.16703196327707945
+  rotation 1.103383557044091e-08 -1.116908338578117e-08 0.9999999999999998 1.5709477287748452
+  scale 0.6 0.6 0.6
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 1 0
+        roughness 1
+        metalness 0
+      }
+      geometry DEF WALL Box {
+        size 0.3 1.7 0.6
+      }
+    }
+  ]
+  name "solid(4)"
+  boundingObject USE WALL
+  physics Physics {
+  }
+  linearVelocity 1.9885484604586483e-11 2.4448187587666105e-10 8.482158174956128e-11
+  angularVelocity -1.3756879245984807e-09 2.7900240137183166e-11 1.0679911828907542e-11
+}
+DEF BALL Shape {
+  appearance PBRAppearance {
+    roughness 1
+    metalness 0
+  }
+  geometry USE BALL_GEOMETRY
 }
 WoodenBox {
   translation 0.101247 -0.216623 0.0742035
   rotation 0.30604397075811207 -0.9218659119175602 0.23769797728843478 1.53135
   size 0.1 0.1 0.1
 }
-E-puck {
-  hidden position_0_0 3952.5802908806686
-  hidden position_0_1 4518.221980071859
-  hidden linearVelocity_0 -0.012173672455743422 0.6218896277399822 112677.01534803677
-  hidden angularVelocity_0 -3.468058197068525 -0.25638542393444635 -0.3384995206574643
-  hidden translation_1 0 0.025999999999999992 0.02
-  hidden rotation_1 0 -1 0 5.826452642470882
-  hidden linearVelocity_1 -0.0061560808288907915 0.5637001641038126 112676.99784156206
-  hidden angularVelocity_1 -5.6531874182830535 0.2005200842222635 -1.803875362583332
-  hidden translation_2 0 -0.026000000000000006 0.02
-  hidden rotation_2 0 -1 0 5.671441097442829
-  hidden linearVelocity_2 -0.01663089078300909 0.6492034922639246 112677.04036366132
-  hidden angularVelocity_2 -5.873588500614982 0.2466465096161865 -1.9506221442294882
-  translation -7.303411601269385 368.04573518193234 68020025.04207934
-  rotation 0.6032819469138845 -0.7548756359786921 0.2573201638689788 -2.8422319301962777
-}
 WoodenBox {
-  translation 0.244278 -0.216525 0
+  translation 0.244278 -0.216525 0.2
   rotation 1 0 0 4.692820414042842e-06
   name "wooden box(1)"
   size 0.1 0.1 0.1
+}
+E-puck {
+  hidden position_0_0 1122.024985370786
+  hidden position_0_1 1294.5673916973806
+  hidden linearVelocity_0 -1.1665508840626634e-06 1.8937350735844424e-06 -7.018143094228435e-08
+  hidden angularVelocity_0 -7.142173668540669e-07 3.759889497983663e-06 -0.000124311915852736
+  hidden translation_1 0 0.02599999999999997 0.02
+  hidden rotation_1 0 0.9999999999999999 0 3.6180006928196056
+  hidden linearVelocity_1 1.32150123261248e-06 3.983400705628032e-06 -2.0862459897679343e-08
+  hidden angularVelocity_1 -1.2783105902696013 1.5169572783282639 -0.0013012508595495245
+  hidden translation_2 0 -0.026000000000000034 0.02
+  hidden rotation_2 0 1 0 0.23121841838575788
+  hidden linearVelocity_2 -3.6216494686764673e-06 -1.821803387864817e-07 -1.1884329422851359e-07
+  hidden angularVelocity_2 -1.5992202793991381 1.8977764636326697 -0.0015968046956073435
+  translation 0.043283895128451766 -0.2977414927717506 7.610766220718726e-06
+  rotation -0.0024243439485764034 0.009159686131568609 -0.9999551103456547 -0.7002602450962421
 }
