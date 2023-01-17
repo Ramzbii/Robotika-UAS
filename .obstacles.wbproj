@@ -9,3 +9,4 @@ orthographicViewHeight: 1
 textFiles: 1 "controllers/epuck_avoid_collision/epuck_avoid_collision.c" "controllers/RotationalMotor/RotationalMotor.c"
 globalOptionalRendering: LightPositions::DistanceSensorRays
 consoles: Console:All:All
+renderingDevicePerspectives: e-puck:camera;1;1;0;0
