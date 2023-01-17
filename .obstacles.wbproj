@@ -6,7 +6,7 @@ maximizedDockId: -1
 centralWidgetVisible: 1
 renderingMode: PLAIN
 orthographicViewHeight: 1
-textFiles: 0 "C:/Program Files/Webots/projects/robots/irobot/create/controllers/ground/ground.c" "C:/Program Files/Webots/projects/robots/irobot/create/controllers/create_avoid_obstacles/create_avoid_obstacles.c" "controllers/my_controller/my_controller.c"
-globalOptionalRendering: LightPositions::DistanceSensorRays::LightSensorRays
+textFiles: 0 "controllers/epuck_avoid_collision/epuck_avoid_collision.c"
+globalOptionalRendering: LightPositions
 consoles: Console:All:All
 renderingDevicePerspectives: e-puck:camera;1;1;0.0224033;0
