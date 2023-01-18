@@ -1,0 +1,44 @@
+#VRML_SIM R2022b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/robots/sphero/bb8/protos/BB-8.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.21527159657861455 -0.3035733842294563 0.9281709649056952 4.978392531408706
+  position -3.388318574000309 6.982808276817614 4.369985894676544
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 10 10
+}
+BB-8 {
+  hidden position_0_0 34.26118090499232
+  hidden position_0_1 34.261182063440856
+  hidden linearVelocity_0 0.1203389513365966 -0.18324046057791962 -0.01654645118518163
+  hidden angularVelocity_0 1.4637797772577037 0.9674742161533483 -0.11597531815677674
+  hidden rotation_3 0 0 -1 3.4379309380851963
+  hidden position_3_0 161.66758251272623
+  hidden linearVelocity_3 0.24189428101817115 -0.3659797877873492 -0.006697224356573876
+  hidden angularVelocity_3 1.4637213757957568 0.9674333271636467 -0.11600208048938276
+  hidden rotation_4 0 -1 0 1.695235473943021
+  hidden linearVelocity_4 0.24183515442354298 -0.3658927232068014 -0.006632130722283106
+  hidden angularVelocity_4 1.4637494953176344 0.9674516035671459 -0.11600223312649328
+  hidden rotation_7 0 0 -1 3.437929779636663
+  hidden linearVelocity_7 0.509552474225891 -0.7683514321053736 0.014798272032435122
+  hidden angularVelocity_7 1.4637949512765174 0.9674842897506188 -0.11597893192976902
+  translation -1.0616001999057154 1.3984199652314904 -0.0423842583720187
+  rotation -0.0005026416493246594 0.0037831142724116455 0.999992717672371 2.4476554136635835
+  controller "<none>"
+}
+Robot {
+  name "supervisor"
+  controller "<none>"
+  supervisor TRUE
+}
