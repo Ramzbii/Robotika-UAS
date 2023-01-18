@@ -1,0 +1,98 @@
+#VRML_SIM R2022b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.30604072697672513 0.32184712378011515 -0.8959651233982409 1.6302473365715138
+  position 1.2871480551276913 3.5194747042817327 1.9325420801712008
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 3 3
+}
+Wall {
+  translation 0.501132 -0.980298 -4.90718e-14
+  size 2 0.9 0.1
+}
+Wall {
+  translation 1.10916 0.593004 -5.04041e-14
+  name "wall(1)"
+  size 0.1 1.8 0.1
+}
+Wall {
+  translation -0.988524 -0.139286 -4.24104e-14
+  rotation 0 1 0 0
+  name "wall(2)"
+  size 0.1 0.7 0.1
+}
+Wall {
+  translation 0.540131 -0.183832 -4.86277e-14
+  rotation 0 1 0 0
+  name "wall(6)"
+  size 0.1 0.7 0.1
+}
+Wall {
+  translation -0.914872 0.548752 -4.59632e-14
+  rotation 0 1 0 0
+  name "wall(4)"
+  size 0.1 0.7 0.1
+}
+Wall {
+  translation -0.370116 0.875734 -4.15222e-14
+  rotation 0 1 0 0
+  name "wall(8)"
+  size 0.1 0.7 0.1
+}
+Wall {
+  translation 0.107591 0.531366 -4.77395e-14
+  rotation 0 1 0 0
+  name "wall(10)"
+  size 0.1 0.7 0.1
+}
+Wall {
+  translation -0.888038 -1.08649 -1.36557e-13
+  rotation 0 1 0 0
+  name "wall(3)"
+  size 1.2 0.3 0.1
+}
+Wall {
+  translation 0.603543 0.732995 -5.12922e-14
+  rotation 0 1 0 0
+  name "wall(7)"
+  size 0.9 0.3 0.1
+}
+Wall {
+  translation 0.054377 1.35524 1.99853e-15
+  rotation 0 1 0 0
+  name "wall(5)"
+  size 1.1 0.3 0.1
+}
+Wall {
+  translation -0.399518 0.0721037 4.66307e-15
+  rotation 0 1 0 0
+  name "wall(9)"
+  size 1.1 0.3 0.1
+}
+E-puck {
+  hidden position_0_0 524.089604598366
+  hidden position_0_1 757.165690191708
+  hidden linearVelocity_0 -0.0038548481924006676 -0.0004091272370511967 6.386262831397239e-07
+  hidden angularVelocity_0 -0.0012858087396346504 0.009388005994817324 0.6005927367449462
+  hidden rotation_1 0 -1 0 3.697961204719255
+  hidden linearVelocity_1 -0.01938341713043522 -0.0022984346249956002 -9.960274818206724e-06
+  hidden angularVelocity_1 0.12251424420647294 -1.0217813048344468 0.6046906295327384
+  hidden rotation_2 0 0.9999999999999999 0 3.1834533301576178
+  hidden linearVelocity_2 0.011800427161361177 0.001485885545980684 -8.317892303837744e-06
+  hidden angularVelocity_2 -0.08194815370115478 0.6634776930585695 0.6043090369463155
+  translation 1.461199401632624 0.5700837942077727 -6.618545019617707e-05
+  rotation -0.0011523718764629056 0.016178663674445946 -0.9998684527880491 -0.1214207975094368
+}
